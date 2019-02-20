@@ -1,13 +1,27 @@
 <!DOCTYPE HTML>
-
-
 <html>
     <head>
+        <link href="estilosCOntac.css" rel="stylesheet" type="text/css">
         <title>Contacto</title>
     </head>
     <body>
-        <title>Contacto</title>
-        <h1>Contacto</h1>
-        <p>Archivo de contacto</p>
+        <title>Formulario de Contacto</title>
+        <form action="/nuestra-web" method="post">
+            <div>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name"/>
+            </div>
+            <div>
+                <label for="email">Correo-electronico:</label>
+                <input type="email" id="mail"/>
+            </div>
+            <div>
+                <label for="msg">Mensaje:</label>
+                <textarea type="msg"></textarea>textarea>
+            </div>
+            <div class="button">
+                <button type="submit">Escriba su mensaje</button>
+            </div>
+        </form>
     </body>
 </html>

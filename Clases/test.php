@@ -1,3 +1,4 @@
+ruta
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,18 +10,70 @@
 
 <body>
     <?php
-    $user = $_GET['user'];
-    $password = $_GET['password'];
-    if (($user == "usuario") AND ($password == "12345")) {
 
-      echo "Bienvenido ".$user;
+   $user = $_GET['user'];
 
-    } else {
+   $password = $_GET['password'];
 
-      echo "¡Usuario o contraseña incorrectos!";
+   $user1 = "mario";
 
-      echo '<br><a href="'.$_SERVER['HTTP_REFERER'].'">Volver</a>';
-    }
+   $pass1 = "clave1";
+
+   $user2 = "juan";
+
+   $pass2 = "clave2";
+
+   $user3 = "diego";
+
+   $pass3 = "clave3";
+
+   $error_notif = "¡Contraseña o usuario incorrecto!" . '<a href="'.$_SERVER['HTTP_REFERER'].'">Volver</a>';
+
+
+
+   switch ($user) {
+
+      case $user1:
+
+         if ($password == $pass1) {
+
+            echo "Bienvenido " . $user;
+
+         } else {
+
+            echo $error_notif;
+
+         }
+      break;
+
+      case $user2:
+
+         if ($password == $pass2) {
+
+            echo "Bienvenido " . $user;
+
+         } else {
+
+            echo $error_notif;
+
+         }
+      break;
+      case $user3:
+
+         if ($password == $pass3) {
+
+            echo "Bienvenido " . $user;
+
+         } else {
+
+            echo $error_notif;
+         }
+      break;
+
+      default:
+
+         echo $error_notif;
+   }
 ?>
 
 </body>
